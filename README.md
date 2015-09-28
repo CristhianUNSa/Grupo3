@@ -1,2 +1,6 @@
 # Grupo3
-Sergio Cortez, Sandra Tellez, Jose Maraz, Walter Marmanillo
+Integrantes:
+  *Sergio Cortez
+  *Sandra Tellez
+  *Jose Maraz
+  *Walter Marmanillo
