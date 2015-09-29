@@ -2,7 +2,7 @@ import os
 class Matriz:
 				
 	def __init__(self):						"""Instancia donde creamos el objeto Matriz"""
-		self._CantFilas=0
+		self.__CantFilas=0
 		self.__CantColumas=0
 		self.__Matriz=[]
 		self.__Rala={}
@@ -42,7 +42,7 @@ class Matriz:
 				self.__Matriz[i][j]=int(raw_input("Elemento (%d %d): "%(i+1,j+1)))
 	
 	
-	def Matriz_Rala(self):									"""Crea Mattriz Hueca o Rala"""
+	def Matriz_Rala(self):									"""Crea Matriz Hueca o Rala"""
 		for i in range(self.__CantFilas):
 			for j in range(self.__CantColumnas):
 				if(not self.__Matriz[i][j]==0):
@@ -83,7 +83,7 @@ class Matriz:
 			for i in range(len(c3)):
 				if(b2[i]==c2[i]):
 					b1=c3[i]+b3[i]
-				print "Posicicion: "
+				print "Posicion: "
 				print b2[i]
 				print "Valor: "
 				print b1
@@ -128,7 +128,7 @@ def menu():
 		
 		
 def main():
-#Programa funciona con dos matrices
+#El programa funciona con dos matrices
 	matriz=Matriz()
 	matriz2=Matriz()
 	op=menu()
@@ -173,12 +173,12 @@ def main():
 			if(matriz.GetFilas()==matriz2.GetFilas() and matriz.GetColumnas()==matriz2.GetColumnas()):
 				matriz.Suma(matriz.GetRala(),matriz2.GetRala())
 			else:
-				print "No se Pueden Sumar Matrices}"	
+				print "No se pueden sumar matrices incompatibles-."	
 		elif(op==7):
 			if(len(matriz.GetRala())==len(matriz2.GetRala())):
 				matriz.Compara(matriz.GetRala(),matriz2.GetRala())
 			else:
-				print "Las matrices ralas no poseen el mismo tamano" 
-		x=raw_input("Precione Enter para continuar......")
+				print "Las matrices ralas no poseen el mismo tamano-." 
+		x=raw_input("Presione Enter para continuar......")
 		op=menu()
 main()
